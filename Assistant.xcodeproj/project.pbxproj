@@ -7,25 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ECB5428128C136DD00707DC5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428028C136DD00707DC5 /* UIButton.swift */; };
+		ECB5428328C137F300707DC5 /* SystemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428228C137F300707DC5 /* SystemIcon.swift */; };
+		ECB5428828C1396000707DC5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428728C1396000707DC5 /* UserModel.swift */; };
+		ECB5428C28C1440700707DC5 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428B28C1440600707DC5 /* UITableView.swift */; };
+		ECB5428E28C147B500707DC5 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428D28C147B500707DC5 /* NoteTableViewCell.swift */; };
+		ECB5429028C1483100707DC5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428F28C1483100707DC5 /* UIView.swift */; };
+		ECB5429228C14C6E00707DC5 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5429128C14C6E00707DC5 /* UILabel.swift */; };
+		ECB5429428C1EB9B00707DC5 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5429328C1EB9B00707DC5 /* UIViewController.swift */; };
+		ECB5429628C1FDEB00707DC5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5429528C1FDEA00707DC5 /* MainTabBarController.swift */; };
+		ECB5429828C21C0D00707DC5 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5429728C21C0D00707DC5 /* UIStackView.swift */; };
+		ECB5429A28C21EBA00707DC5 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5429928C21EBA00707DC5 /* TaskViewController.swift */; };
+		ECB5429C28C21EE500707DC5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5429B28C21EE500707DC5 /* SettingViewController.swift */; };
 		ECC8C6AF28C10EDF00945235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC8C6AE28C10EDF00945235 /* AppDelegate.swift */; };
 		ECC8C6B128C10EDF00945235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC8C6B028C10EDF00945235 /* SceneDelegate.swift */; };
-		ECC8C6B328C10EDF00945235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC8C6B228C10EDF00945235 /* ViewController.swift */; };
+		ECC8C6B328C10EDF00945235 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC8C6B228C10EDF00945235 /* NoteViewController.swift */; };
 		ECC8C6B828C10EE100945235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC8C6B728C10EE100945235 /* Assets.xcassets */; };
 		ECC8C6BB28C10EE100945235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC8C6B928C10EE100945235 /* LaunchScreen.storyboard */; };
 		ECC8C6C428C1105000945235 /* ColorSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC8C6C328C1105000945235 /* ColorSetup.swift */; };
 		ECC8C6C628C1109D00945235 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC8C6C528C1109D00945235 /* HexColor.swift */; };
+		ECC8C6CD28C1136300945235 /* NavSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC8C6CC28C1136300945235 /* NavSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ECB5428028C136DD00707DC5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		ECB5428228C137F300707DC5 /* SystemIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIcon.swift; sourceTree = "<group>"; };
+		ECB5428728C1396000707DC5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		ECB5428B28C1440600707DC5 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		ECB5428D28C147B500707DC5 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		ECB5428F28C1483100707DC5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		ECB5429128C14C6E00707DC5 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		ECB5429328C1EB9B00707DC5 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		ECB5429528C1FDEA00707DC5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		ECB5429728C21C0D00707DC5 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		ECB5429928C21EBA00707DC5 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		ECB5429B28C21EE500707DC5 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		ECC8C6AB28C10EDF00945235 /* Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC8C6AE28C10EDF00945235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC8C6B028C10EDF00945235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECC8C6B228C10EDF00945235 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECC8C6B228C10EDF00945235 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		ECC8C6B728C10EE100945235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECC8C6BA28C10EE100945235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECC8C6BC28C10EE100945235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC8C6C328C1105000945235 /* ColorSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSetup.swift; sourceTree = "<group>"; };
 		ECC8C6C528C1109D00945235 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+		ECC8C6CC28C1136300945235 /* NavSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +65,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ECB5427F28C136D300707DC5 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				ECB5428028C136DD00707DC5 /* UIButton.swift */,
+				ECB5428B28C1440600707DC5 /* UITableView.swift */,
+				ECB5428F28C1483100707DC5 /* UIView.swift */,
+				ECB5429128C14C6E00707DC5 /* UILabel.swift */,
+				ECB5429328C1EB9B00707DC5 /* UIViewController.swift */,
+				ECB5429728C21C0D00707DC5 /* UIStackView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		ECB5428628C1395800707DC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECB5428728C1396000707DC5 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECB5429D28C223C500707DC5 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				ECC8C6B228C10EDF00945235 /* NoteViewController.swift */,
+				ECB5428D28C147B500707DC5 /* NoteTableViewCell.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		ECB5429E28C223CF00707DC5 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				ECB5429928C21EBA00707DC5 /* TaskViewController.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		ECB5429F28C223D600707DC5 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				ECB5429B28C21EE500707DC5 /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		ECC8C6A228C10EDF00945235 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +130,7 @@
 		ECC8C6AD28C10EDF00945235 /* Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				ECB5428628C1395800707DC5 /* Model */,
 				ECC8C6C828C1128A00945235 /* Application */,
 				ECC8C6C928C1129900945235 /* View */,
 				ECC8C6C228C1103600945235 /* Extension */,
@@ -69,8 +142,10 @@
 		ECC8C6C228C1103600945235 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				ECB5427F28C136D300707DC5 /* UIKit */,
 				ECC8C6C728C1123400945235 /* Supporting */,
 				ECC8C6C328C1105000945235 /* ColorSetup.swift */,
+				ECB5428228C137F300707DC5 /* SystemIcon.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -79,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				ECC8C6C528C1109D00945235 /* HexColor.swift */,
+				ECC8C6CC28C1136300945235 /* NavSetup.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -96,7 +172,10 @@
 			isa = PBXGroup;
 			children = (
 				ECC8C6B928C10EE100945235 /* LaunchScreen.storyboard */,
-				ECC8C6B228C10EDF00945235 /* ViewController.swift */,
+				ECB5429528C1FDEA00707DC5 /* MainTabBarController.swift */,
+				ECB5429D28C223C500707DC5 /* Note */,
+				ECB5429E28C223CF00707DC5 /* Task */,
+				ECB5429F28C223D600707DC5 /* Setting */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,11 +259,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECC8C6B328C10EDF00945235 /* ViewController.swift in Sources */,
+				ECB5429028C1483100707DC5 /* UIView.swift in Sources */,
+				ECC8C6B328C10EDF00945235 /* NoteViewController.swift in Sources */,
+				ECB5429628C1FDEB00707DC5 /* MainTabBarController.swift in Sources */,
+				ECB5429228C14C6E00707DC5 /* UILabel.swift in Sources */,
+				ECC8C6CD28C1136300945235 /* NavSetup.swift in Sources */,
+				ECB5429C28C21EE500707DC5 /* SettingViewController.swift in Sources */,
 				ECC8C6AF28C10EDF00945235 /* AppDelegate.swift in Sources */,
+				ECB5428E28C147B500707DC5 /* NoteTableViewCell.swift in Sources */,
 				ECC8C6C628C1109D00945235 /* HexColor.swift in Sources */,
+				ECB5428128C136DD00707DC5 /* UIButton.swift in Sources */,
+				ECB5428328C137F300707DC5 /* SystemIcon.swift in Sources */,
+				ECB5428C28C1440700707DC5 /* UITableView.swift in Sources */,
+				ECB5429828C21C0D00707DC5 /* UIStackView.swift in Sources */,
 				ECC8C6B128C10EDF00945235 /* SceneDelegate.swift in Sources */,
+				ECB5428828C1396000707DC5 /* UserModel.swift in Sources */,
+				ECB5429A28C21EBA00707DC5 /* TaskViewController.swift in Sources */,
 				ECC8C6C428C1105000945235 /* ColorSetup.swift in Sources */,
+				ECB5429428C1EB9B00707DC5 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,11 +417,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66STM82H6X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Assistant/Info.plist;
+				INFOPLIST_FILE = Assistant/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Assistant;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -354,11 +447,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66STM82H6X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Assistant/Info.plist;
+				INFOPLIST_FILE = Assistant/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Assistant;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
