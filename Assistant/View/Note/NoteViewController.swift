@@ -15,10 +15,6 @@ class NoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Заметки"
-        view.backgroundColor = ColorSetup.background
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorSetup.white]
-        
         setupConstraints()
         setupView()
         

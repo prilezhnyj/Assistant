@@ -13,10 +13,6 @@ class TaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Задачи"
-        view.backgroundColor = ColorSetup.background
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorSetup.white]
-        
         setupView()
     }
     

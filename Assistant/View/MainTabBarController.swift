@@ -26,9 +26,11 @@ class MainTabBarController: UITabBarController {
     private func creationNavigationController(viewController: UIViewController, title: String, nameImageItem: String) -> UINavigationController {
         let item = UITabBarItem(title: title, image: UIImage(systemName: nameImageItem), tag: 0)
         let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.title = title
+        viewController.title = title
+        viewController.view.backgroundColor = ColorSetup.background
         navigationController.tabBarItem = item
         navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorSetup.white]
         return navigationController
     }
 }
