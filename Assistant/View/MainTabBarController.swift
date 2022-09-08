@@ -17,14 +17,14 @@ class MainTabBarController: UITabBarController {
     }
     
     private func settingsTabBarControllers() {
-        let noteVC = creationNavigationController(viewController: NoteViewController(), title: "Заметки", nameImageItem: "pencil")
-        let taskVC = creationNavigationController(viewController: TaskViewController(), title: "Задачи", nameImageItem: "list.dash")
-        let settingVC = creationNavigationController(viewController: SettingViewController(), title: "Настройки", nameImageItem: "gear")
+        let noteVC = creationNavigationController(viewController: NoteViewController(), title: "Заметки", nameImageItem: "note")
+        let taskVC = creationNavigationController(viewController: TaskViewController(), title: "Задачи", nameImageItem: "task")
+        let settingVC = creationNavigationController(viewController: SettingViewController(), title: "Настройки", nameImageItem: "settings")
         viewControllers = [noteVC, taskVC, settingVC]
     }
     
     private func creationNavigationController(viewController: UIViewController, title: String, nameImageItem: String) -> UINavigationController {
-        let item = UITabBarItem(title: title, image: UIImage(systemName: nameImageItem), tag: 0)
+        let item = UITabBarItem(title: title, image: UIImage(named: nameImageItem), tag: 0)
         let navigationController = UINavigationController(rootViewController: viewController)
         viewController.title = title
         viewController.view.backgroundColor = ColorSetup.background

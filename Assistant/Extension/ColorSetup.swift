@@ -9,11 +9,11 @@ import UIKit
 
 class ColorSetup {
     static var background: UIColor {
-        return hexColor(value: "1C1C1E")
+        return hexColor(value: "000000")
     }
     
     static var gray: UIColor {
-        return hexColor(value: "3A3A3C")
+        return hexColor(value: "1C1C1E")
     }
     
     static var separator: UIColor {

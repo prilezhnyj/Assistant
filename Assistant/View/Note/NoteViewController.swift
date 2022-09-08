@@ -48,8 +48,21 @@ extension NoteViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleleAction = UIContextualAction(style: .destructive, title: nil) { _, _, _ in
+            //
+        }
+        
+        deleleAction.image = UIImage(named: "delete")
+        deleleAction.backgroundColor = ColorSetup.background
+        
+        
+        return UISwipeActionsConfiguration(actions: [deleleAction])
+    }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 124
+        return NoteTableViewCell.heightCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -62,8 +75,8 @@ extension NoteViewController {
         view.addSubview(noteTableView)
         NSLayoutConstraint.activate([
             noteTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            noteTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            noteTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            noteTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            noteTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             noteTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
     }
 }

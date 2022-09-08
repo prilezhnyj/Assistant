@@ -10,6 +10,7 @@ import UIKit
 extension UITableView {
     convenience init(backgroundColor: UIColor) {
         self.init()
+        self.separatorColor = .clear
         self.backgroundColor = backgroundColor
         self.translatesAutoresizingMaskIntoConstraints = false
     }
