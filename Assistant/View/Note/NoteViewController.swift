@@ -9,25 +9,92 @@ import UIKit
 
 class NoteViewController: UIViewController {
     
-    let myMax = UserModel(firstName: "Ирина", secondName: "Надымова", image: "photo")
+    let currentUser = UserModel(firstName: "Ирина", secondName: "Надымова", image: "photo")
+    var notesArray = [NoteModel]()
     
-    private let noteTableView = UITableView(backgroundColor: .clear)
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, NoteModel>
+    typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Section, NoteModel>
+    
+    private var dataSource: DataSource!
+    private var snapshot: DataSourceSnapshot!
+    
+    // MARK: UI-element
+    var noteColletctionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        collectionView.backgroundColor = .clear
+        collectionView.bounces = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        notesArray.append(NoteModel(title: "Техническое задание №1", description: "Техническое описание заметки с элементами точного описание и дополнения", date: "20 декабря 2019 / 14:57"))
+        notesArray.append(NoteModel(title: "Техническое задание №2", description: "Техническое описание заметки с элементами точного описание и дополнения", date: "20 декабря 2019 / 14:57"))
+        notesArray.append(NoteModel(title: "Техническое задание №3", description: "Техническое описание заметки с элементами точного описание и дополнения", date: "20 декабря 2019 / 14:57"))
+        
         setupConstraints()
         setupView()
-        
-        noteTableView.delegate = self
-        noteTableView.dataSource = self
-        noteTableView.register(NoteTableViewCell.self, forCellReuseIdentifier: NoteTableViewCell.cellID)
+        setupCollectionView()
+        setupCollectioViewDataSource()
+        setupSnapshot(for: notesArray)
     }
     
+    // MARK: Configuring UICollectionView
+    private func setupCollectionView() {
+        noteColletctionView.register(NoteCollectionViewCell.self, forCellWithReuseIdentifier: NoteCollectionViewCell.cellID)
+    }
+    
+    // MARK: Configuring UICollectionViewDiffableDataSource
+    private func setupCollectioViewDataSource() {
+        dataSource = DataSource(collectionView: noteColletctionView, cellProvider: { (collectionView, indexPath, userModel) -> NoteCollectionViewCell? in
+            let section = Section(rawValue: indexPath.section)
+            let note = self.notesArray[indexPath.row]
+
+            switch section {
+            case .note:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NoteCollectionViewCell.cellID, for: indexPath) as! NoteCollectionViewCell
+                cell.configurationCell(for: note)
+                return cell
+            case .none:
+                return nil
+            }
+        })
+    }
+    
+    // MARK: Configuring NSDiffableDataSourceSnapshot
+    private func setupSnapshot(for notes: [NoteModel]) {
+        snapshot = DataSourceSnapshot()
+        snapshot.appendSections([Section.note])
+        snapshot.appendItems(notes)
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
+    
+    // MARK: Create CompositionalLayout
+    static private func createLayout() -> UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(99))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 8
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
+    }
+}
+
+// MARK: - Setting up a custom NavigationBar
+extension NoteViewController {
     private func setupView() {
         createCustomNavigationBar()
-    
+        
         let newNoteButton = createCustomButton(imageName: SystemIcon.add, selector: #selector(newNoteButtonTapped))
-        let customTitleView = createCustomTitleView(userInfo: myMax)
+        let customTitleView = createCustomTitleView(userInfo: currentUser)
         
         navigationItem.rightBarButtonItem = newNoteButton
         navigationItem.titleView = customTitleView
@@ -38,45 +105,14 @@ class NoteViewController: UIViewController {
     }
 }
 
-extension NoteViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NoteTableViewCell.cellID, for: indexPath) as! NoteTableViewCell
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleleAction = UIContextualAction(style: .destructive, title: nil) { _, _, _ in
-            //
-        }
-        
-        deleleAction.image = UIImage(named: "delete")
-        deleleAction.backgroundColor = ColorSetup.background
-        
-        
-        return UISwipeActionsConfiguration(actions: [deleleAction])
-    }
-    
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return NoteTableViewCell.heightCell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
+// MARK: - Setting constraints
 extension NoteViewController {
     private func setupConstraints() {
-        view.addSubview(noteTableView)
+        view.addSubview(noteColletctionView)
         NSLayoutConstraint.activate([
-            noteTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            noteTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            noteTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            noteTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
+            noteColletctionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            noteColletctionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            noteColletctionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            noteColletctionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)])
     }
 }

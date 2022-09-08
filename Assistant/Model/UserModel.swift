@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserModel {
+struct UserModel: Hashable, Decodable {
     let firstName: String?
     let secondName: String?
     let image: String?
