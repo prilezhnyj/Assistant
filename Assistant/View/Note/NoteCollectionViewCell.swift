@@ -7,26 +7,20 @@
 
 import UIKit
 
-class NoteCollectionViewCell: UICollectionViewCell {
+class NoteCollectionViewCell: UITableViewCell {
     
     static let cellID = "NoteCollectionViewCell"
-    static let heightCell: CGFloat = 114
+    static let heightCell: CGFloat = 99
     
     private let titleText = UILabel(text: "Заголовок", textColor: ColorSetup.white, font: .boldSystemFont(ofSize: 20))
     private let descriptionText = UILabel(text: "Равным образом сложившаяся структура организации требуют.", textColor: ColorSetup.separator, font: .systemFont(ofSize: 15))
     private let dataNote = UILabel(text: "20 декабря 2019 / 14:57", textColor: ColorSetup.separator, font: .systemFont(ofSize: 12))
     
     // MARK: Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = ColorSetup.gray
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = ColorSetup.background
         setupConstraints()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        layer.cornerRadius = 10
-        clipsToBounds = true
     }
     
     // MARK: Required Init
@@ -43,6 +37,7 @@ class NoteCollectionViewCell: UICollectionViewCell {
 
 extension NoteCollectionViewCell {
     private func setupConstraints() {
+        
         self.addSubview(titleText)
         NSLayoutConstraint.activate([
             titleText.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
