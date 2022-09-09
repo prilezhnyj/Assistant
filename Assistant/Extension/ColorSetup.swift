@@ -13,7 +13,7 @@ class ColorSetup {
     }
     
     static var gray: UIColor {
-        return hexColor(value: "1C1C1E")
+        return hexColor(value: "CCCCCC")
     }
     
     static var separator: UIColor {

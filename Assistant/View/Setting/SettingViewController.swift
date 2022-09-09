@@ -13,20 +13,5 @@ class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
-    }
-    
-    private func setupView() {
-        createCustomNavigationBar()
-        
-        let newNoteButton = createCustomButton(imageName: SystemIcon.add, selector: #selector(newNoteButtonTapped))
-        let customTitleView = createCustomTitleView(userInfo: myMax)
-        
-        navigationItem.rightBarButtonItem = newNoteButton
-        navigationItem.titleView = customTitleView
-    }
-    
-    @objc private func newNoteButtonTapped() {
-        print(#function)
     }
 }

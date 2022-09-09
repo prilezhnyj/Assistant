@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC7544A228CB6623006823C9 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7544A128CB6623006823C9 /* NewNoteViewController.swift */; };
 		ECB1899A28CA4AEE00AB3291 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1899928CA4AEE00AB3291 /* NoteModel.swift */; };
 		ECB5428128C136DD00707DC5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428028C136DD00707DC5 /* UIButton.swift */; };
 		ECB5428328C137F300707DC5 /* SystemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428228C137F300707DC5 /* SystemIcon.swift */; };
 		ECB5428828C1396000707DC5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428728C1396000707DC5 /* UserModel.swift */; };
 		ECB5428C28C1440700707DC5 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428B28C1440600707DC5 /* UITableView.swift */; };
-		ECB5428E28C147B500707DC5 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428D28C147B500707DC5 /* NoteCollectionViewCell.swift */; };
 		ECB5429028C1483100707DC5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5428F28C1483100707DC5 /* UIView.swift */; };
 		ECB5429228C14C6E00707DC5 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5429128C14C6E00707DC5 /* UILabel.swift */; };
 		ECB5429428C1EB9B00707DC5 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5429328C1EB9B00707DC5 /* UIViewController.swift */; };
@@ -31,12 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC7544A128CB6623006823C9 /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		ECB1899928CA4AEE00AB3291 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		ECB5428028C136DD00707DC5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		ECB5428228C137F300707DC5 /* SystemIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIcon.swift; sourceTree = "<group>"; };
 		ECB5428728C1396000707DC5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		ECB5428B28C1440600707DC5 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
-		ECB5428D28C147B500707DC5 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECB5428F28C1483100707DC5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		ECB5429128C14C6E00707DC5 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		ECB5429328C1EB9B00707DC5 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				ECC8C6B228C10EDF00945235 /* NoteViewController.swift */,
-				ECB5428D28C147B500707DC5 /* NoteCollectionViewCell.swift */,
+				EC7544A128CB6623006823C9 /* NewNoteViewController.swift */,
 			);
 			path = Note;
 			sourceTree = "<group>";
@@ -269,11 +269,11 @@
 				ECC8C6CD28C1136300945235 /* NavSetup.swift in Sources */,
 				ECB5429C28C21EE500707DC5 /* SettingViewController.swift in Sources */,
 				ECC8C6AF28C10EDF00945235 /* AppDelegate.swift in Sources */,
-				ECB5428E28C147B500707DC5 /* NoteCollectionViewCell.swift in Sources */,
 				ECC8C6C628C1109D00945235 /* HexColor.swift in Sources */,
 				ECB1899A28CA4AEE00AB3291 /* NoteModel.swift in Sources */,
 				ECB5428128C136DD00707DC5 /* UIButton.swift in Sources */,
 				ECB5428328C137F300707DC5 /* SystemIcon.swift in Sources */,
+				EC7544A228CB6623006823C9 /* NewNoteViewController.swift in Sources */,
 				ECB5428C28C1440700707DC5 /* UITableView.swift in Sources */,
 				ECB5429828C21C0D00707DC5 /* UIStackView.swift in Sources */,
 				ECC8C6B128C10EDF00945235 /* SceneDelegate.swift in Sources */,
