@@ -24,8 +24,6 @@ class NewNoteViewController: UIViewController {
         textView.font = .systemFont(ofSize: 17)
         textView.layer.cornerRadius = 5
         textView.clipsToBounds = true
-        textView.layer.borderColor = ColorSetup.gray.cgColor
-        textView.layer.borderWidth = 1
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
     }()
@@ -37,6 +35,8 @@ class NewNoteViewController: UIViewController {
         
         setupConstraints()
         setupNavigationItem()
+        
+//        descriptionTextView.tex
     }
 }
 

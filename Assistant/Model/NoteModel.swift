@@ -15,6 +15,7 @@ struct NoteModel: Hashable, Decodable {
     static func arrayTest() -> [NoteModel] {
         var array = [NoteModel]()
         array.append(NoteModel(title: "Тестовый заголовок", description: "Тестовое описание и детали", date: "20.12.2018"))
+        array.append(NoteModel(title: "Тестовый заголовок 2", description: "Тестовое описание и детали", date: "20.12.2018"))
         return array
     }
 }

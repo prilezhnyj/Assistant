@@ -34,8 +34,10 @@ extension NoteViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc private func editTableView() {
-        print(#function)
+    @objc private func editTableView(_ sender: UIBarButtonItem) {
+        noteTableView.isEditing = !noteTableView.isEditing
+        sender.title = noteTableView.isEditing ? "Готово" : "Изменить"
+        sender.style = noteTableView.isEditing ? .done : .plain
     }
 }
 
@@ -69,6 +71,8 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let note = notesArray[indexPath.row].title
+        print(note)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -83,6 +87,19 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
         delete.image = UIImage(systemName: "trash.fill")
         delete.backgroundColor = .systemRed
         return UISwipeActionsConfiguration(actions: [delete])
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let note = notesArray[sourceIndexPath.row]
+        notesArray.remove(at: sourceIndexPath.row)
+        notesArray.insert(note, at: destinationIndexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            notesArray.remove(at: indexPath.row)
+        }
     }
 }
 
